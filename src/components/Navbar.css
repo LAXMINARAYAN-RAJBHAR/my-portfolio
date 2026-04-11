@@ -1,0 +1,31 @@
+.navbar {
+  background: linear-gradient(to right, #a855f7, #ec4899); /* purple to pink */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: column; /* stack vertically on small screens */
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    flex-direction: row; /* horizontal on medium+ screens */
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+.nav-link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #fcd34d; /* yellow hover */
+}
