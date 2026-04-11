@@ -40,14 +40,14 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  cursor: pointer;
   background: linear-gradient(90deg, #ff4b5c, #6a11cb, #2575fc);
-  -webkit-background-clip: text-shadow;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-  border-radius: 0.90rem;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2), 0 0 12px rgba(250,204,21,0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Add these fixes */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .home-title:hover {
   transform: scale(1.08);
