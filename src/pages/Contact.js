@@ -45,11 +45,16 @@ function Contact() {
             className={`contact-form ${fading ? "fade-out" : ""}`}
             onSubmit={sendEmail}
           >
-            <h2>Contact Me</h2>
-            <input type="text" name="name" placeholder="Your Name" required />
+            <h2>Message Me</h2>
+            <input
+              type="text"
+              name="from_name"
+              placeholder="Your Name"
+              required
+            />
             <input
               type="email"
-              name="email"
+              name="from_email"
               placeholder="Your Email"
               required
             />
