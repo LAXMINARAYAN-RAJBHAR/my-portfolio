@@ -10,18 +10,41 @@
   margin: 40px auto;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
-
-/* Contact Form */
-.contact-form {
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background: #ffffff;
+.form-wrapper {
+  position: relative;
+  flex: 1 1 45%;          /* match contact-form's flex */
+  background: #ffffff;    /* match contact-form's card style */
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
 }
+
+/* Remove the duplicate card styling from contact-form since wrapper now has it */
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: transparent;  /* wrapper handles the white bg now */
+  padding: 0;               /* wrapper handles padding now */
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.success-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  /* vertically center in the card */
+  text-align: center;
+  gap: 14px;
+  padding: 1rem;
+  flex: 1;                  /* fill the wrapper height */
+  animation: fadeIn 0.4s ease;
+}
+
 
 .contact-form h2 {
   margin-bottom: 10px;
@@ -63,6 +86,12 @@
 .contact-form button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255,75,92,0.4);
+}
+.contact-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 /* Contact Info Section */
@@ -110,4 +139,72 @@
   .contact-info {
     flex: 1 1 100%;
   }
+}
+
+/* Fade out the form */
+.contact-form.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+.checkmark-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #e1f5ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.checkmark-circle svg {
+  width: 32px;
+  height: 32px;
+}
+
+.check-path {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: drawCheck 0.4s ease 0.2s forwards;
+}
+
+.success-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.success-sub {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.reset-btn {
+  background: none;
+  border: none;
+  color: #185fa5;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+  margin-top: 4px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+@keyframes drawCheck {
+  to { stroke-dashoffset: 0; }
 }
