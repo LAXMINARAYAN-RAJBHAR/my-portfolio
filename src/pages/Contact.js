@@ -12,13 +12,12 @@ function Contact() {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .sendForm(
-        "process.env.service_kqefnjk", // ✅ Service ID from .env
-        "process.env.template_lbmbbh4", // ✅ Template ID from .env
-        form.current,
-        "process.env.UiZyfJGxqP4nAMCfA", // ✅ Public Key from .env
-      )
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      form.current,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
       .then(() => {
         setLoading(false);
         setFading(true);
