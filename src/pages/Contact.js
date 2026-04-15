@@ -14,10 +14,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_kqefnjk", // ← Replace with your Service ID
-        "template_lbmbbh4", // ← Replace with your Template ID
+        "process.env.service_kqefnjk", // ✅ Service ID from .env
+        "process.env.template_lbmbbh4", // ✅ Template ID from .env
         form.current,
-        "UiZyfJGxqP4nAMCfA", // ← Replace with your Public Key
+        "process.env.UiZyfJGxqP4nAMCfA", // ✅ Public Key from .env
       )
       .then(() => {
         setLoading(false);
