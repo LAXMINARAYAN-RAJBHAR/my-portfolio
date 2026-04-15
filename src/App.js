@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <Router basename="/my-portfolio"> {/* ✅ This is the only fix needed */}
+    <Router basename="/my-portfolio">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
