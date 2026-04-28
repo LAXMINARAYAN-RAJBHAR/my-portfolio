@@ -64,3 +64,13 @@
   font-size: 0.95rem;
   line-height: 1.5;
 }
+
+.project-description a {
+  color: #ee0a0a;        /* match your portfolio's color */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-description a:hover {
+  text-decoration: underline;
+}
