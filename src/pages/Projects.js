@@ -26,8 +26,7 @@ function Projects() {
             >
               Click Here 🔗
             </a>
-            {" "}— The RollamRoll app is the desktop version of Laxminarayan Rajbhar's
-            video-sharing website. It serves as a significant entertainment and
+            {" "}— The RollamRoll app is the desktop version of video-sharing website. It serves as a significant entertainment and
             social media platform by enabling users to view, share, search, and
             publish videos on desktops and tablets.
           </p>
