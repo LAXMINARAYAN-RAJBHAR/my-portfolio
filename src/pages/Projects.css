@@ -65,12 +65,65 @@
   line-height: 1.5;
 }
 
-.project-description a {
-  color: #ee0a0a;        /* match your portfolio's color */
-  font-weight: 600;
-  text-decoration: none;
+.home-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
-.project-description a:hover {
-  text-decoration: underline;
+.home-subtitle::first-line {
+  color: #e74c3c;
+}
+.role-1 { color: #8a1306; animation: colorCycle 3s infinite; }
+.role-2 { color: #180585; animation: colorCycle 3s infinite 1s; }
+.role-3 { color: #093f02; animation: colorCycle 3s infinite 2s; }
+
+@keyframes colorCycle {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.photo-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Outer ring — slower, reverse */
+.photo-ring-outer {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background: conic-gradient(#3498db, #1D9E75, #f953c6, #3498db);
+  animation: spinRing 4s linear infinite reverse;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+/* Inner ring — faster */
+.photo-ring-inner {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: conic-gradient(#f953c6, #7f00ff, #3498db, #f953c6);
+  animation: spinRing 2s linear infinite;
+  z-index: 1;
+}
+
+/* Photo */
+.home-photo {
+  position: absolute;
+  inset: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  z-index: 2;
+}
+
+@keyframes spinRing {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }

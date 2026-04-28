@@ -8,13 +8,20 @@ function Home() {
 
   return (
     <div className="home-container">
-      <img src={myPhoto} alt="Laxminarayan Rajbhar" className="home-photo" />
+      <div className="photo-wrapper">
+        <div className="photo-ring-outer"></div>
+        <div className="photo-ring-inner"></div>
+        <img src={myPhoto} alt="Laxminarayan Rajbhar" className="home-photo" />
+      </div>
       <h1 className="home-title">Hello, I'm Laxminarayan Rajbhar</h1>
-      <p className="home-subtitle">Frontend Developer | Creative UI Designer</p>
-      <button 
-        className="home-button" 
-        onClick={() => navigate("/projects")}
-      >
+      <p className="home-subtitle">
+        <span className="role-1">Frontend Developer</span>
+        {" | "}
+        <span className="role-2">Creative UI Designer</span>
+        {" | "}
+        <span className="role-3">Backend Developer</span>
+      </p>
+      <button className="home-button" onClick={() => navigate("/projects")}>
         View My Work
       </button>
     </div>
