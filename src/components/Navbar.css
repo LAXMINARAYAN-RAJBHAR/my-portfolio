@@ -1,21 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 16px;
-  background: #0f0f0f;
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  background: #0f0f0f;
+  padding: 20px 16px;
+  display: flex;
+  justify-content: center;    /* ← centers navbar-links horizontally */
+  align-items: center;
 }
 
 .navbar-links {
   display: flex;
+  flex-direction: row;
+  justify-content: center;    /* ← centers buttons inside */
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 10px;
-  width: 100%;
+  margin: 0 auto;             /* ← auto margin forces center */
+  width: fit-content;         /* ← shrinks to button widths only */
 }
 
 .nav-link {
@@ -30,7 +38,6 @@
   display: inline-block;
   background: transparent;
   white-space: nowrap;
-  box-sizing: border-box;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
