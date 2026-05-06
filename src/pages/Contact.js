@@ -93,16 +93,16 @@ function Contact() {
         <div className="social-links">
           <h4>Social Links</h4>
           <div className="social-icons">
-            <a href="https://github.com/your-username" target="_blank" rel="noreferrer" className="social-btn github">
+            <a href="https://github.com/laxminarayan-rajbhar" target="_blank" rel="noreferrer" className="social-btn github">
               <FaGithub size={16} /> GitHub
             </a>
-            <a href="https://linkedin.com/in/your-username" target="_blank" rel="noreferrer" className="social-btn linkedin">
+            <a href="https://www.linkedin.com/in/laxminarayan-rajbhar-11771a401/" target="_blank" rel="noreferrer" className="social-btn linkedin">
               <FaLinkedin size={16} /> LinkedIn
             </a>
-            <a href="https://twitter.com/your-username" target="_blank" rel="noreferrer" className="social-btn twitter">
+            <a href="https://x.com/Laxminaray69827" target="_blank" rel="noreferrer" className="social-btn twitter">
               <FaTwitter size={16} /> Twitter
             </a>
-            <a href="https://instagram.com/your-username" target="_blank" rel="noreferrer" className="social-btn instagram">
+            <a href="https://www.instagram.com/laxminarayan.rajbhar01/" target="_blank" rel="noreferrer" className="social-btn instagram">
               <FaInstagram size={16} /> Instagram
             </a>
           </div>
