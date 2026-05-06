@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 12px;
+  padding: 20px 16px;
   background: #0f0f0f;
   width: 100%;
   box-sizing: border-box;
@@ -12,56 +12,67 @@
 
 .navbar-links {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   width: 100%;
 }
 
 .nav-link {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
   font-size: 13px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #fff;
-  padding: 12px 0;
-  border-radius: 8px;
-  display: block;
-  text-align: center;
-  width: 200px;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-  user-select: none;
+  letter-spacing: 0.04em;
+  padding: 10px 24px;
+  border-radius: 6px;
+  display: inline-block;
+  background: transparent;
+  white-space: nowrap;
   box-sizing: border-box;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.nav-link:active {
-  transform: translateY(4px) !important;
-  box-shadow: none !important;
-}
+/* Home — Orange */
+.nav-home { border: 2px solid #f97316; color: #f97316; }
+.nav-home:hover { background: #f97316; color: #fff; }
 
-/* Home — Red */
-.nav-home { background: #ef4444; box-shadow: 0 5px 0 #991b1b; }
-.nav-home:hover { transform: translateY(3px); box-shadow: 0 2px 0 #991b1b; }
+/* About — Purple */
+.nav-about { border: 2px solid #a855f7; color: #a855f7; }
+.nav-about:hover { background: #a855f7; color: #fff; }
 
-/* About — Amber */
-.nav-about { background: #f59e0b; box-shadow: 0 5px 0 #92400e; }
-.nav-about:hover { transform: translateY(3px); box-shadow: 0 2px 0 #92400e; }
+/* Projects — Emerald */
+.nav-projects { border: 2px solid #10b981; color: #10b981; }
+.nav-projects:hover { background: #10b981; color: #fff; }
 
-/* Projects — Green */
-.nav-projects { background: #22c55e; box-shadow: 0 5px 0 #14532d; }
-.nav-projects:hover { transform: translateY(3px); box-shadow: 0 2px 0 #14532d; }
+/* Contact — Blue */
+.nav-contact { border: 2px solid #3b82f6; color: #3b82f6; }
+.nav-contact:hover { background: #3b82f6; color: #fff; }
 
-/* Contact — Indigo */
-.nav-contact { background: #6366f1; box-shadow: 0 5px 0 #3730a3; }
-.nav-contact:hover { transform: translateY(3px); box-shadow: 0 2px 0 #3730a3; }
+/* ── Tablet (max 600px) ── */
+@media (max-width: 600px) {
+  .navbar { padding: 14px 10px; }
 
-/* ── Mobile (max 480px) ── */
-@media (max-width: 480px) {
   .nav-link {
-    width: 85%;
+    font-size: 11px;
+    padding: 9px 16px;
+  }
+}
+
+/* ── Mobile (max 400px) ── */
+@media (max-width: 400px) {
+  .navbar-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav-link {
+    text-align: center;
     font-size: 12px;
-    padding: 12px 0;
+    padding: 11px 8px;
+    width: 100%;
   }
 }
