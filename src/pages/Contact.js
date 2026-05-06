@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 function Contact() {
   const form = useRef();
@@ -100,7 +101,7 @@ function Contact() {
               <FaLinkedin size={16} /> LinkedIn
             </a>
             <a href="https://x.com/Laxminaray69827" target="_blank" rel="noreferrer" className="social-btn twitter">
-              <FaTwitter size={16} /> Twitter
+              <FaXTwitter size={16} /> X
             </a>
             <a href="https://www.instagram.com/laxminarayan.rajbhar01/" target="_blank" rel="noreferrer" className="social-btn instagram">
               <FaInstagram size={16} /> Instagram

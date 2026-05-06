@@ -250,8 +250,8 @@
 .social-btn.linkedin  { border: 2px solid #0a66c2; color: #0a66c2; }
 .social-btn.linkedin:hover  { background: #0a66c2; color: #ffffff; }
 
-.social-btn.twitter   { border: 2px solid #1da1f2; color: #1da1f2; }
-.social-btn.twitter:hover   { background: #1da1f2; color: #ffffff; }
+.social-btn.twitter   { border: 2px solid #000000; color: #000000; }
+.social-btn.twitter:hover { background: #000000; color: #ffffff; }
 
 .social-btn.instagram { border: 2px solid #e1306c; color: #e1306c; }
 .social-btn.instagram:hover { background: #e1306c; color: #ffffff; }
