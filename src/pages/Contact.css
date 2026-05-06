@@ -208,3 +208,55 @@
 @keyframes drawCheck {
   to { stroke-dashoffset: 0; }
 }
+
+.social-links {
+  margin-top: 24px;
+}
+
+.social-links h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  margin-bottom: 14px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 9px 18px;
+  border-radius: 6px;
+  background: transparent;
+  width: fit-content;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.social-btn.github    { border: 2px solid #a0a0a0; color: #a0a0a0; }
+.social-btn.github:hover    { background: #a0a0a0; color: #0f0f0f; }
+
+.social-btn.linkedin  { border: 2px solid #0a66c2; color: #0a66c2; }
+.social-btn.linkedin:hover  { background: #0a66c2; color: #ffffff; }
+
+.social-btn.twitter   { border: 2px solid #1da1f2; color: #1da1f2; }
+.social-btn.twitter:hover   { background: #1da1f2; color: #ffffff; }
+
+.social-btn.instagram { border: 2px solid #e1306c; color: #e1306c; }
+.social-btn.instagram:hover { background: #e1306c; color: #ffffff; }
+
+@media (max-width: 480px) {
+  .social-icons { flex-direction: row; flex-wrap: wrap; }
+  .social-btn { font-size: 11px; padding: 8px 12px; }
+}

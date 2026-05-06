@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 function Contact() {
   const form = useRef();
@@ -11,13 +12,13 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
-
-    emailjs.sendForm(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      form.current,
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-    )
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
       .then(() => {
         setLoading(false);
         setFading(true);
@@ -45,18 +46,8 @@ function Contact() {
             onSubmit={sendEmail}
           >
             <h2>Message Me</h2>
-            <input
-              type="text"
-              name="from_name"
-              placeholder="Your Name"
-              required
-            />
-            <input
-              type="email"
-              name="from_email"
-              placeholder="Your Email"
-              required
-            />
+            <input type="text" name="from_name" placeholder="Your Name" required />
+            <input type="email" name="from_email" placeholder="Your Email" required />
             <textarea name="message" placeholder="Your Message" required />
             <button type="submit" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
@@ -98,6 +89,25 @@ function Contact() {
         <p>
           Mobile: <a href="tel:+918108408345">+91 8108408345</a>
         </p>
+
+        <div className="social-links">
+          <h4>Social Links</h4>
+          <div className="social-icons">
+            <a href="https://github.com/your-username" target="_blank" rel="noreferrer" className="social-btn github">
+              <FaGithub size={16} /> GitHub
+            </a>
+            <a href="https://linkedin.com/in/your-username" target="_blank" rel="noreferrer" className="social-btn linkedin">
+              <FaLinkedin size={16} /> LinkedIn
+            </a>
+            <a href="https://twitter.com/your-username" target="_blank" rel="noreferrer" className="social-btn twitter">
+              <FaTwitter size={16} /> Twitter
+            </a>
+            <a href="https://instagram.com/your-username" target="_blank" rel="noreferrer" className="social-btn instagram">
+              <FaInstagram size={16} /> Instagram
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   );
