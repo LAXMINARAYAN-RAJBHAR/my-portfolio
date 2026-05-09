@@ -55,11 +55,35 @@
   box-shadow: 0 10px 24px rgba(0,0,0,0.4), 0 0 30px rgba(245,158,11,0.8);
 }
 
+.home-title {
+  margin-bottom: 20px; /* or however much space you want */
+}
+
 .home-subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  color: #fef9c3;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 1.2rem;
+  min-height: 2rem;
+  margin-bottom: 20px; /* space between subtitle and button */
+}
+
+.role-animated {
+  color: #00050a; /* or your preferred accent color */
+  font-weight: 600;
+}
+
+.cursor {
+  display: inline-block;
+  color: #000307;
+  font-weight: 300;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
 
 .home-button {
