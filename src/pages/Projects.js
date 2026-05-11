@@ -20,7 +20,7 @@ function Projects() {
           </h3>
           <p className="project-description">
             Check this "RollamRoll" App via this Link:{" "}
-            <a href="https://laxminarayan-rajbhar.github.io/rollamroll-frontend/"
+            <a href="https://laxminarayan-rajbhar.github.io/zillplayer-frontend/"
               target="_blank"
               rel="noopener noreferrer"
             >
