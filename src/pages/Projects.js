@@ -16,7 +16,7 @@ function Projects() {
 
         <div className="project-card">
           <h3 className="project-title">
-            I created a Youtube-like app that I called "ZixPlayer."
+            I created a Youtube-like app that I called "ZixPlayer"
           </h3>
           <p className="project-description">
             Check this "RollamRoll" App via this Link:{" "}
