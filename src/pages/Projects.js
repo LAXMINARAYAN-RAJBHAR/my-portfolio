@@ -19,14 +19,14 @@ function Projects() {
             I created a Youtube-like app that I called "ZixPlayer"
           </h3>
           <p className="project-description">
-            Check this "RollamRoll" App via this Link:{" "}
+            Check this "ZixPlayer" App via this Link:{" "}
             <a href="https://laxminarayan-rajbhar.github.io/zixplayer-frontend/"
               target="_blank"
               rel="noopener noreferrer"
             >
               Click Here 🔗
             </a>
-            {" "}— The RollamRoll app is the desktop version of video-sharing website. It serves as a significant entertainment and
+            {" "}— The ZixPlayer app is the desktop version of video-sharing website. It serves as a significant entertainment and
             social media platform by enabling users to view, share, search, and
             publish videos on desktops and tablets.
           </p>
