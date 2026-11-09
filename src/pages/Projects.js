@@ -19,8 +19,8 @@ function Projects() {
             I created a Youtube-like app that I called "ZixPlayer"
           </h3>
           <p className="project-description">
-            Check this "ZixPlayer" App via this Link:{" "}
-            <a href="https://laxminarayan-rajbhar.github.io/zixplayer-frontend/"
+            Check this "ZIXPLON" App via this Link:{" "}
+            <a href="www.zixplon.in"
               target="_blank"
               rel="noopener noreferrer"
             >
