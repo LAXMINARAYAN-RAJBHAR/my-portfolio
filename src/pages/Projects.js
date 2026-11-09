@@ -20,7 +20,8 @@ function Projects() {
           </h3>
           <p className="project-description">
             Check this "ZIXPLON" App via this Link:{" "}
-            <a href="www.zixplon.in"
+            <a
+              href="https://www.zixplon.in"
               target="_blank"
               rel="noopener noreferrer"
             >
